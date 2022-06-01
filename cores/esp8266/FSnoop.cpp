@@ -7,6 +7,11 @@
 
 extern "C"
 {
+    void close_all_fs(void)
+{
+    littlefs_request_end();
+    spiffs_request_end();
+}
 
 void close_all_fs(void)
 {
